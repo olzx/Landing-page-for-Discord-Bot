@@ -5,7 +5,7 @@
 <p align="center">
     <img src="./landing-assets/logo.png" width="100%">
     <img src="./landing-assets/logs-head.png" width="50%">
-    <img src="./landing-assets/logs-page.png" width="50%">
+    <img src="./landing-assets/logs-page.png" width="100%">
 </p>
 <h2 align="center"><a  href="https://olzx.github.io/Landing-page-for-Discord-Bot/">Демонстрация</a></h2>
 
