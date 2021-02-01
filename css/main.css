@@ -1,0 +1,435 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+body {
+  margin: 0;
+  background-color: #131B21;
+  font-family: "Montserrat", sans-serif;
+}
+@media (max-width: 767px) {
+  body.lock {
+    overflow: hidden;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+  background-color: #000;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #2f3136;
+}
+
+::-webkit-scrollbar-thumb {
+  height: 50px;
+  background-color: #202225;
+  border-radius: 5px;
+  border-top: solid;
+  border-bottom: solid;
+  border-color: #36393f;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #2f3136;
+}
+
+.container {
+  max-width: 1135px;
+  margin: 0 auto;
+}
+@media (max-width: 1200px) {
+  .container {
+    max-width: 970px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 750px;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    max-width: none;
+  }
+}
+
+.navbar {
+  position: relative;
+  background-color: #6D00EF;
+  min-height: 50px;
+  padding: 5px 0;
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(50, 50, 50, 0.25);
+  -moz-box-shadow: 0px 4px 4px 0px rgba(50, 50, 50, 0.25);
+  box-shadow: 0px 4px 4px 0px rgba(50, 50, 50, 0.25);
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .navbar:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #6D00EF;
+    z-index: 1;
+  }
+}
+.navbar_fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 3;
+}
+.navbar__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.navbar__logo {
+  border-radius: 50px;
+  background-color: #6D00EF;
+  transition: 0.3s ease;
+  z-index: 2;
+}
+.navbar__logo:hover {
+  box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.12) inset;
+  -webkit-box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.12) inset;
+  -moz-box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.12) inset;
+}
+.navbar__logo img {
+  width: 40px;
+}
+.navbar__right {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.navbar__burger {
+  display: none;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .navbar__burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    z-index: 3;
+    margin-right: 20px;
+  }
+  .navbar__burger.active:before {
+    transform: rotate(45deg);
+    top: 9px;
+  }
+  .navbar__burger.active span {
+    transform: scale(0);
+  }
+  .navbar__burger.active:after {
+    transform: rotate(-45deg);
+    bottom: 9px;
+  }
+  .navbar__burger span {
+    position: absolute;
+    background-color: #fff;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    top: 9px;
+    transition: all 0.3s ease;
+  }
+  .navbar__burger:before, .navbar__burger:after {
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: all 0.3s ease;
+  }
+  .navbar__burger:before {
+    top: 0;
+  }
+  .navbar__burger:after {
+    bottom: 0;
+  }
+}
+.navbar__menu {
+  display: flex;
+  align-items: center;
+}
+.navbar__menu > :not(:first-child) {
+  margin-left: 20px;
+}
+@media (max-width: 767px) {
+  .navbar__menu > :not(:first-child) {
+    margin-left: 0;
+  }
+}
+@media (max-width: 767px) {
+  .navbar__menu {
+    box-sizing: border-box;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #1f2024;
+    padding: 100px 40px;
+    padding-top: 100px;
+    transition: all 0.3s ease;
+  }
+  .navbar__menu.active {
+    display: flex;
+    flex-direction: column;
+    top: 0;
+  }
+}
+.navbar__list {
+  display: flex;
+  margin: 0px;
+  padding: 0;
+}
+.navbar__list :not(:first-child) {
+  margin-left: 15px;
+}
+.navbar__list li {
+  list-style: none;
+  font-weight: 500;
+}
+@media (max-width: 767px) {
+  .navbar__list {
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .navbar__list :not(:first-child) {
+    margin-left: 0px;
+  }
+  .navbar__list li {
+    width: 100%;
+    text-align: center;
+  }
+  .navbar__list a {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    line-height: 100px;
+  }
+}
+.navbar__link {
+  color: #FFFFFF;
+  display: block;
+  line-height: 50px;
+  transition: 0.3s all;
+}
+.navbar__link:hover {
+  color: #969696;
+}
+
+.footer {
+  height: 240px;
+  background-image: url(../img/footer-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 60%;
+  color: #FFFFFF;
+}
+@media (max-width: 660px) {
+  .footer {
+    background-position: 50% 100%;
+    height: 500px;
+  }
+}
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 100%;
+}
+@media (max-width: 767px) {
+  .footer__container {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 660px) {
+  .footer__container {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+.footer__author {
+  padding-bottom: 10px;
+}
+.footer__author p {
+  margin: 0;
+  margin-top: 5px;
+  color: #dbdbdb;
+}
+.footer__politics {
+  display: flex;
+  padding-bottom: 10px;
+}
+@media (max-width: 992px) {
+  .footer__politics {
+    flex-direction: column;
+  }
+  .footer__politics span {
+    display: none;
+  }
+}
+.footer__politics a {
+  color: #FFFFFF;
+  transition: 0.2s all;
+}
+.footer__politics a:hover {
+  color: #d4d4d4;
+}
+
+.search {
+  position: relative;
+}
+@media (max-width: 767px) {
+  .search {
+    max-width: 300px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+}
+.search input[type=search] {
+  outline: 0;
+  width: 100%;
+  padding: 5px 10px;
+  padding-right: 30px;
+  border: none;
+  background: linear-gradient(92.83deg, #7A11F7 2.59%, #5A00C6 97.97%);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  font-family: "Montserrat", sans-serif;
+  color: #FFFFFF;
+}
+.search input[type=search]::placeholder {
+  color: #b1b1b1;
+}
+@media (max-width: 767px) {
+  .search input[type=search] {
+    font-size: 18px;
+  }
+}
+.search__submit {
+  height: 100%;
+  width: 26px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search__submit img {
+  position: relative;
+  height: 15px;
+  width: 15px;
+}
+
+.arrow {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid #fff;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+}
+.arrow.active {
+  transform: rotate(-180deg);
+}
+
+@media (max-width: 767px) {
+  .personal {
+    order: -1;
+    margin-bottom: 45px;
+  }
+}
+.personal li {
+  position: relative;
+  list-style: none;
+}
+.personal ul {
+  padding: 0;
+}
+.personal__list {
+  display: flex;
+}
+.personal__list > li {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .personal__list > li {
+    margin: 0 auto;
+  }
+}
+.personal__face {
+  width: 30px;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+.personal__link {
+  color: #FFFFFF;
+}
+.personal__link.parent {
+  margin-right: 30px;
+}
+body.mouse .personal__list > li:hover .sub-personal__list {
+  display: block;
+}
+
+body.touch .sub-personal__list.open {
+  display: block;
+}
+
+body.touch .arrow {
+  display: block;
+}
+
+.sub-personal__list {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  padding: 15px 0 0 0 !important;
+  width: 160px;
+}
+.sub-personal__list > li {
+  background-color: #242B31;
+}
+.sub-personal__list > li:hover {
+  background-color: #1f6feb;
+}
+.sub-personal__link {
+  color: #d6dce2;
+  display: inline-block;
+  padding: 5px 10px;
+}
