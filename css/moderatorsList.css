@@ -1,0 +1,133 @@
+.head {
+  padding-top: 137px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.head h1 {
+  font-weight: 800;
+  color: #FFFFFF;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+@media (max-width: 660px) {
+  .head h1 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 480px) {
+  .head h1 {
+    font-size: 20px;
+  }
+}
+.head p {
+  font-size: 18px;
+  line-height: 20px;
+  color: #e7e7e7;
+  text-align: center;
+  margin: 0;
+}
+@media (max-width: 660px) {
+  .head p {
+    font-size: 15px;
+  }
+}
+
+.wrapper {
+  max-width: 1300px;
+  height: 100%;
+  padding: 36px 30px;
+  margin: 40px auto;
+  background-color: #2F3136;
+  border-radius: 13px;
+}
+@media (max-width: 1200px) {
+  .wrapper {
+    padding: 0;
+  }
+}
+
+.inner {
+  max-width: 100%;
+  height: 100%;
+  padding: 21px 35px;
+  background-color: #36393F;
+  border-radius: 15px;
+}
+@media (max-width: 1200px) {
+  .inner {
+    border-radius: 0;
+  }
+}
+.inner__header {
+  display: flex;
+  justify-content: flex-end;
+}
+.inner__search {
+  width: 190px;
+  margin: 0;
+}
+.inner__search input[type=search] {
+  background: none;
+  background-color: #202225;
+  border-radius: 3px;
+}
+@media (max-width: 767px) {
+  .inner__search input[type=search] {
+    font-size: 15px;
+  }
+}
+
+.button {
+  height: 34px;
+  background-color: #747f8d;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 3px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  cursor: pointer;
+  outline: 0;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.17s ease;
+}
+.button:hover {
+  background-color: #68727f;
+}
+
+.text-left {
+  text-align: start;
+}
+
+.moderators {
+  margin-top: 30px;
+  overflow-x: auto;
+}
+.moderators table {
+  border-spacing: 0;
+  width: 100%;
+}
+.moderators__table-responsive {
+  color: #FFFFFF;
+}
+.moderators__table-responsive th, .moderators__table-responsive td {
+  padding: 0.55rem;
+}
+.moderators__table-responsive tbody {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), -4px -4px 7px rgba(0, 0, 0, 0.25);
+}
+.moderators__table-responsive tbody td {
+  border-bottom: 1px solid #74747454;
+}
+.moderators__table-responsive tbody tr:hover {
+  background-color: rgba(147, 128, 178, 0.2);
+}
+.moderators__nicks {
+  max-width: 180px;
+}
+.moderators__who {
+  max-width: 130px;
+}

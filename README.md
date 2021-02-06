@@ -7,6 +7,7 @@
     <img src="./landing-assets/logs-head.png" width="50%">
     <img src="./landing-assets/logs-page.png" width="100%">
     <img src="./landing-assets/personal-page.png" width="100%">
+    <img src="./landing-assets/moderators-list.png" width="100%">
 </p>
 <h2 align="center"><a  href="https://olzx.github.io/Landing-page-for-Discord-Bot/">Демонстрация</a></h2>
 
@@ -21,3 +22,4 @@
 - Страница с выбором панели (authorized.html);
 - Страница с логами (logs.html);
 - Личный кабинет (private.html);
+- Список модераторов и их статистика (moderatorsList.html)
